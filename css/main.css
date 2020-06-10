@@ -49,8 +49,7 @@
 /*home page css*/
 .home{
     position: relative;
-    background:#0000007d;
-    background: url('../images/home.webp');
+    background: url('../images/home.jpg');
     background-position: bottom;
     background-size: cover;
     opacity: 0.6;
@@ -58,8 +57,7 @@
 /*about page css*/
 .about{
     position: relative;
-    background:#0000007d;
-    background-image: url('../images/about.webp');
+    background-image: url('../images/about.jpg');
     background-position: top right;
     background-size: cover;
     opacity: 0.6;
@@ -119,7 +117,7 @@ hr{
     top:50%;
     transform: translate(-50%,-50%);
     height: 35vh;
-    min-height: 380px;
+    min-height: 400px;
     width: 50vw;
     max-width: 300px;
     background: #f4f0e6;
@@ -139,7 +137,7 @@ hr{
     margin: 2rem auto;
     height: 9rem;
     width: 9rem;
-    background: url(../images/personal_photo.webp) center;
+    background: url(../images/personal_photo.jpg) center;
     background-size: cover;
 }
 .name{
@@ -181,5 +179,8 @@ footer{
 @media (orientation:landscape) {
     html {
         font-size: 15px;
+    }
+    .contact_method li{
+        margin: 0 3rem;
     }
 }
