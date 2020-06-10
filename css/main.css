@@ -11,6 +11,7 @@
     height: 6vh;
     background: #000000bf;
     font-size: 1.7rem;
+    color: white;
 }
 .header .tohome{
     position: absolute;
@@ -29,15 +30,14 @@
     display: inline;
     padding: 0px 1vw;
 }
-
 .header a{
+    cursor: pointer;
     text-decoration:none;
     transition: ease .8s;
 }
 .header a:visited,:link{
     color: white;
 }
-
 .header a:hover{
     color: red;
 }
@@ -49,7 +49,8 @@
 /*home page css*/
 .home{
     position: relative;
-    background: url('../images/home.JPG');
+    background:#0000007d;
+    background: url('../images/home.webp');
     background-position: bottom;
     background-size: cover;
     opacity: 0.6;
@@ -57,7 +58,8 @@
 /*about page css*/
 .about{
     position: relative;
-    background-image: url('../images/about.JPG');
+    background:#0000007d;
+    background-image: url('../images/about.webp');
     background-position: top right;
     background-size: cover;
     opacity: 0.6;
@@ -97,7 +99,7 @@ hr{
 }
 /*skill page css*/
 .skill{
-    background: cornflowerblue;
+    background:#0000007d;
     background-size: cover;
 }
 /*personal_project page css*/
@@ -107,13 +109,73 @@ hr{
 }
 /*contact page css*/
 .contact{
-    background: rosybrown;
+    position: relative;
+    background: #263859db;
     background-size: cover;
+}
+.personal_card{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    height: 35vh;
+    min-height: 380px;
+    width: 50vw;
+    max-width: 300px;
+    background: #f4f0e6;
+    border-radius: 15px;
+    text-align: center;
+} 
+.contact_title{
+    margin: 1.7rem auto;
+    font-size: 1.7rem;
+    background: #e9c455;
+    height: 2rem;
+    line-height:2rem;
+    font-family: Comic Sans MS;
+}
+.personal_photo{
+    border-radius: 50%;
+    margin: 2rem auto;
+    height: 9rem;
+    width: 9rem;
+    background: url(../images/personal_photo.webp) center;
+    background-size: cover;
+}
+.name{
+    font-size: 1.7rem;
+    font-family: 微軟正黑體;
+    margin: 1.5rem auto;
+}
+.contact_method{
+    padding: 0.3rem 0 .1rem 0;
+    margin: 1rem auto;
+    list-style: none;
+    width: 80%;
+    background: #e9c455;
+    border-radius: 20px;
+}
+.contact_method li{
+    float: left;
+    margin: 0 1.8rem;
+}
+footer{
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    background: #000000bf;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    line-height: 10vh;
 }
 
 @media (max-width: 980px) {
     html {
         font-size: 25px;
+    }
+    .personal_card{
+        max-width: 430px;
     }
 }
 @media (orientation:landscape) {
