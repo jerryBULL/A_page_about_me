@@ -8,7 +8,7 @@ $(document).ready(function() {
         if(moveing===0)
         {   
             moveing=1; 
-            if(e.deltaY>0)
+            if(e.deltaY<0)
             {   
                 if(page<4)
                 {
@@ -50,8 +50,7 @@ $(document).ready(function() {
         },
         threshold:100,
         fingers:'all'
-      });
-
+    });
     //偵測網頁大小變化
     $(window).resize(function() {
         moveing=1;
@@ -62,5 +61,5 @@ $(document).ready(function() {
         moveing=1; 
         let id=$(this).attr('id');
         $("html,body").animate({"scrollTop":$("#"+src[id[1]]).offset().top},function(){page=id[1];moveing=0;});
-    });   
+    });
 })
