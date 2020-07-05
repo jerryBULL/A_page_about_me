@@ -3,6 +3,9 @@
     padding: 0;
     overflow: hidden;
 }
+html{
+    width: 100%;
+}
 /*導覽列*/
 .header{
     z-index: 99;
@@ -70,7 +73,6 @@
     transform: translateY(-50%);
     width: 100%;
     height: 30vh;
-    min-height: 290px;
     background-color: rgba(46, 46, 46, 0.6);
     text-align: center;
     color: white;
@@ -91,7 +93,7 @@ hr{
     background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.61), rgba(0,0,0,0));
 }
 .content{
-    margin: 10px 0px;
+    margin: 5px 0px;
     width: 100%;
     font-size: 1.7rem;
 }
@@ -102,22 +104,23 @@ hr{
 }
 .skill_content{
     height: 94vh;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 /*width*/
-::-webkit-scrollbar {
+.skill_content::-webkit-scrollbar {
     width: 1vw;
+    max-width: 10px;
 }
 /*scroll背景*/
-::-webkit-scrollbar-track {
+.skill_content::-webkit-scrollbar-track {
     background: #00000000;
 }
 /*scroll本身*/
-::-webkit-scrollbar-thumb {
+.skill_content::-webkit-scrollbar-thumb {
     background: #00000052;
     border-radius: 10px;
 }
-::-webkit-scrollbar-thumb:hover{
+.skill_content::-webkit-scrollbar-thumb:hover{
     background: #0000008a;
 }
 .skill h1{
@@ -138,17 +141,19 @@ hr{
     left: 50%;
     transform: translate(-50%);
     width: 18vh;
-    height: 18vh;
+    height: 100%;
     transition: 0.5s;
     z-index: 2;
     cursor: pointer;
     text-align : center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-family: 微軟正黑體;
     border-radius: 10%;
 }
 .skill_img img{
     position: relative;
+    width: 70%;
+    height: 70%;
     margin: 0.6rem 0px 0px 0px;
 }
 .skill_text{
@@ -158,7 +163,7 @@ hr{
     transform: translate(-30%);
     position: absolute;
     width: 23vh;
-    height: 18vh;
+    height: 100%;
     background: #0000008c;
     transition: 0.5s;
     z-index: 1;
@@ -229,10 +234,10 @@ hr{
     width: 80%;
     background: #e9c455;
     border-radius: 20px;
+    display: flex;
 }
 .contact_method li{
-    float: left;
-    margin: 0 1.8rem;
+    margin: 0 auto;
 }
 footer{
     position: absolute;
@@ -245,19 +250,36 @@ footer{
     line-height: 10vh;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 667px) and (min-width: 376px){
     html {
-        font-size: 25px;
+        font-size: 10px;
+    }
+    .card{
+        min-height: 55vh;
+    }
+    .skill_card{
+        height: 22vh;
+    }
+    .skill_img{
+        width: 22vh;
     }
     .personal_card{
-        max-width: 430px;
+        min-height: 250px;
     }
 }
-@media (orientation:landscape) {
+@media (max-width: 375px) {
     html {
-        font-size: 15px;
+        font-size: 10px;
     }
-    .contact_method li{
-        margin: 0 3rem;
+    .card{
+        min-height: 30vh;
+    }
+    .personal_card{
+        min-width: 300px;
+        min-height: 250px;
+    }
+    .skill_card{
+        width: 100vw;
+        margin: 1vh;
     }
 }
