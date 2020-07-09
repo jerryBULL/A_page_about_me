@@ -4,140 +4,163 @@
         <title>一頁式自介</title>
         <link rel="icon" href="images/personal-information.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/fullpage.css">
         <link rel="stylesheet" type="text/css" href="./css/main.css">
     </head>
     <body>
         <nac class="header">
-            <div class="tohome"><a id="p0">Home</a></div>
+            <div class="tohome" data-menuanchor="#home"><a href="#home">Home</a></div>
             <ul class="nav">
-                <li><a id ="p1">About</a></li>
-                <li><a id ="p2">Skill</a></li>
-                <li><a id ="p3">Side Project</a></li>
-                <li><a id ="p4">Contact Me</a></li>
+                <li data-menuanchor="#about"><a href ="#about">About</a></li>
+                <li data-menuanchor="#skill"><a href ="#skill">Skill</a></li>
+                <li data-menuanchor="#personal_project"><a href ="#personal_project">Side Project</a></li>
+                <li data-menuanchor="#contact"><a href ="#contact">Contact Me</a></li>
             </ul>
         </nac>
-        <div id="home" class="box home">
-            <div class="card">
-                <p class="title">關於這個頁面</p>
-                <hr>
-                <p class="content">Someing text....Someing text....</p>
-                <p class="content">Someing text....Someing text....</p>
-                <p class="content">Someing text....Someing text....</p>
-                <p class="content">Someing text....Someing text....</p>
-                <p class="content">Someing text....Someing text....</p>
-            </div>
-        </div>
-        <div  id="about" class="box about">
-            <div class="card">
-                <p class="title">關於我</p>
-                <hr>
-                <p class="content">Someing text....Someing text....</p>
-                <p class="content">Someing text....Someing text....</p>
-                <p class="content">Someing text....Someing text....</p>
-                <p class="content">Someing text....Someing text....</p>
-                <p class="content">Someing text....Someing text....</p>
-            </div>
-        </div>
-        <div id="skill" class="box skill">
-            <div id="skill_content" class="skill_content">
-                <h1>SKILL</h1>
-                <hr>
-                <div class="skill_card">
-                    <div class="skill_img">
-                        <img src="images/html5.png">
-                        <p>Html</p>
-                    </div>
-                    <div class="skill_text">
-                        <p>soming skill..</p>
-                    </div>
-                </div>
-                <div class="skill_card">
-                    <div class="skill_img">
-                        <img src="images/css.png">
-                        <p>CSS</p>
-                    </div>
-                    <div class="skill_text">
-    
-                    </div>
-                </div>
-                <div class="skill_card">
-                    <div class="skill_img">
-                        <img src="images/js.png">
-                        <p>JavaScript</p>
-                    </div>
-                    <div class="skill_text">
-    
-                    </div>
-                </div>
-                <div class="skill_card">
-                    <div class="skill_img">
-                        <img src="images/vuejs.png">
-                        <p>Vue.js</p>
-                    </div>
-                    <div class="skill_text">
-    
-                    </div>
-                </div>
-                <div class="skill_card">
-                    <div class="skill_img">
-                        <img src="images/nodejs.png">
-                        <p>Node.js</p>
-                    </div>
-                    <div class="skill_text">
-    
-                    </div>
-                </div>
-                <div class="skill_card">
-                    <div class="skill_img">
-                        <img src="images/github.png">
-                        <p>Git</p>
-                    </div>
-                    <div class="skill_text">
-    
-                    </div>
-                </div>
-                <div class="skill_card">
-                    <div class="skill_img">
-                        <img src="images/python.png">
-                        <p>Python</p>
-                    </div>
-                    <div class="skill_text">
-                        <p>soming skill..</p>
-                    </div>
-                </div>
-                <div class="skill_card">
-                    <div class="skill_img">
-                        <img src="images/otherskills.png">
-                        <p>Other</p>
-                    </div>
-                    <div class="skill_text">
-                        <p>soming skill..</p>
-                    </div>
+        <div id="fullpage">
+            <div class="section box home" data-anchor="home">
+                <div class="card">
+                    <p class="title">關於這個頁面</p>
+                    <hr>
+                    <p class="content">Someing text....Someing text....</p>
+                    <p class="content">Someing text....Someing text....</p>
+                    <p class="content">Someing text....Someing text....</p>
+                    <p class="content">Someing text....Someing text....</p>
+                    <p class="content">Someing text....Someing text....</p>
                 </div>
             </div>
-        </div>
-        <div id="personal_project" class="box personal_project">
-
-        </div>
-        <div id="contact" class="box contact">
-            <div class="personal_card">
-                <h2 class="contact_title">Contact Me</h2>
-                <div class="personal_photo"></div>
-                <h2 class="name">簡子樫(Jerry)</h2>
-                <ul class="contact_method">
-                    <li><a href="https://www.facebook.com/profile.php?id=100000332167120" target="_blank"><img src="./images/facebook.png"></a></li>
-                    <li><a href="https://github.com/jerryBULL"><img src="./images/github-sign.png" target="_blank"></a></li>
-                    <li><a href="mailto:broadwood66@gmail.com"><img src="./images/email.png"></a></li>
-                </ul>
+            <div class="section box about" data-anchor="about"> 
+                <div class="card">
+                    <p class="title">關於我</p>
+                    <hr>
+                    <p class="content">Someing text....Someing text....</p>
+                    <p class="content">Someing text....Someing text....</p>
+                    <p class="content">Someing text....Someing text....</p>
+                    <p class="content">Someing text....Someing text....</p>
+                    <p class="content">Someing text....Someing text....</p>
+                </div>
             </div>
-            <footer>
-                版權所有 © 簡子樫 保留所有權利。
-            </footer>
+            <div class="section box skill" data-anchor="skill">
+                <div id="skill_content" class="skill_content">
+                    <h1>SKILL</h1>
+                    <hr>
+                    <div class="skill_card">
+                        <div class="skill_img">
+                            <img src="images/html5.png">
+                            <p>Html</p>
+                        </div>
+                        <div class="skill_text">
+                            <p>soming skill..</p>
+                        </div>
+                    </div>
+                    <div class="skill_card">
+                        <div class="skill_img">
+                            <img src="images/css.png">
+                            <p>CSS</p>
+                        </div>
+                        <div class="skill_text">
+        
+                        </div>
+                    </div>
+                    <div class="skill_card">
+                        <div class="skill_img">
+                            <img src="images/js.png">
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill_text">
+        
+                        </div>
+                    </div>
+                    <div class="skill_card">
+                        <div class="skill_img">
+                            <img src="images/vuejs.png">
+                            <p>Vue.js</p>
+                        </div>
+                        <div class="skill_text">
+        
+                        </div>
+                    </div>
+                    <div class="skill_card">
+                        <div class="skill_img">
+                            <img src="images/nodejs.png">
+                            <p>Node.js</p>
+                        </div>
+                        <div class="skill_text">
+        
+                        </div>
+                    </div>
+                    <div class="skill_card">
+                        <div class="skill_img">
+                            <img src="images/github.png">
+                            <p>Git</p>
+                        </div>
+                        <div class="skill_text">
+        
+                        </div>
+                    </div>
+                    <div class="skill_card">
+                        <div class="skill_img">
+                            <img src="images/python.png">
+                            <p>Python</p>
+                        </div>
+                        <div class="skill_text">
+                            <p>soming skill..</p>
+                        </div>
+                    </div>
+                    <div class="skill_card">
+                        <div class="skill_img">
+                            <img src="images/otherskills.png">
+                            <p>Other</p>
+                        </div>
+                        <div class="skill_text">
+                            <p>soming skill..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section box personal_project" data-anchor="personal_project">
+                <div id="personal_project_content" class="personal_project_content">
+                    <h1>Side Project</h1>
+                    <hr>
+                    <div class="personal_project_card">
+                        <div class="personal_project_img">
+                            <img src="images/side_project01.PNG">
+                            <p>Html</p>
+                        </div>
+                        <div class="personal_project_text">
+                            <p>soming skill..</p>
+                        </div>
+                    </div>
+                    <div class="personal_project_card">
+                        <div class="personal_project_img">
+                            <img src="images/css.png">
+                            <p>CSS</p>
+                        </div>
+                        <div class="personal_project_text">
+                            <p>soming skill..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section box contact" data-anchor="contact">
+                <div class="personal_card">
+                    <h2 class="contact_title">Contact Me</h2>
+                    <div class="personal_photo"></div>
+                    <h2 class="name">簡子樫(Jerry)</h2>
+                    <ul class="contact_method">
+                        <li><a href="https://www.facebook.com/profile.php?id=100000332167120" target="_blank"><img src="./images/facebook.png"></a></li>
+                        <li><a href="https://github.com/jerryBULL"><img src="./images/github-sign.png" target="_blank"></a></li>
+                        <li><a href="mailto:broadwood66@gmail.com"><img src="./images/email.png"></a></li>
+                    </ul>
+                </div>
+                <footer>
+                    版權所有 © 簡子樫 保留所有權利。
+                </footer>
+            </div>
         </div>
     </body>
     <script src="./js/jquery-3.5.1.min.js"></script>
-    <script src="./js/jquery.touchSwipe.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-    <script src="./js/lodash.min.js"></script>
+    <script src="js/scrolloverflow.min.js"></script>
+    <script src="js/fullpage.js"></script>
     <script src="./js/main.js"></script>
 </html>

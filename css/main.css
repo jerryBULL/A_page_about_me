@@ -1,10 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: hidden;
-}
-html{
-    width: 100%;
 }
 /*導覽列*/
 .header{
@@ -12,7 +8,7 @@ html{
     position: fixed;
     width: 100%;
     height: 6vh;
-    background: #000000bf;
+    background: #493e3ebf;
     font-size: 1.7rem;
     color: white;
 }
@@ -100,28 +96,9 @@ hr{
 /*skill page css*/
 .skill{
     background:#0000003d;
-    padding: 6vh 0px;
 }
 .skill_content{
-    height: 94vh;
-    overflow-y: scroll;
-}
-/*width*/
-.skill_content::-webkit-scrollbar {
-    width: 1vw;
-    max-width: 10px;
-}
-/*scroll背景*/
-.skill_content::-webkit-scrollbar-track {
-    background: #00000000;
-}
-/*scroll本身*/
-.skill_content::-webkit-scrollbar-thumb {
-    background: #00000052;
-    border-radius: 10px;
-}
-.skill_content::-webkit-scrollbar-thumb:hover{
-    background: #0000008a;
+    height: 100%;
 }
 .skill h1{
     text-align: center;
@@ -184,8 +161,71 @@ hr{
 }
 /*personal_project page css*/
 .personal_project{
-    background: brown;
-    background-size: cover;
+    background:#0000003d;
+}
+.personal_project_content{
+    padding: 6vh 0 0 0;/*專案多到會超過頁面的時候刪除這行*/
+    height: 100%;
+}
+.personal_project h1{
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: Comic Sans MS;
+}
+.personal_project_card{
+    position: relative;
+    width: 49.5vw;
+    height: 18vh;
+    margin: 5vh 0;
+    float: left;
+}
+.personal_project_img{
+    position: absolute;
+    background-color: white;
+    left: 50%;
+    transform: translate(-50%);
+    width: 18vh;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 2;
+    cursor: pointer;
+    text-align : center;
+    font-size: 1.3rem;
+    font-family: 微軟正黑體;
+    border-radius: 10%;
+}
+.personal_project_img img{
+    border-radius: 10px;
+    position: relative;
+    width: 70%;
+    height: 70%;
+    margin: 0.6rem 0px 0px 0px;
+}
+.personal_project_text{
+    padding: 0px 10px;
+    opacity: 0;
+    left: 50%;
+    transform: translate(-30%);
+    position: absolute;
+    width: 23vh;
+    height: 100%;
+    background: #0000008c;
+    transition: 0.5s;
+    z-index: 1;
+    border-radius: 0 10% 10% 0;
+    color: white;
+}
+.personal_project_text p{
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+.personal_project_card:hover .personal_project_img{
+    transform: translate(-120%);
+    border-radius: 10% 0 0 10%;
+}
+.personal_project_card:hover .personal_project_text{
+    opacity: 1;
+    transform: translate(-16%);
 }
 /*contact page css*/
 .contact{
@@ -263,6 +303,12 @@ footer{
     .skill_img{
         width: 22vh;
     }
+    .personal_project_card{
+        height: 22vh;
+    }
+    .personal_project_img{
+        width: 22vh;
+    }
     .personal_card{
         min-height: 250px;
     }
@@ -279,6 +325,10 @@ footer{
         min-height: 250px;
     }
     .skill_card{
+        width: 100vw;
+        margin: 1vh;
+    }
+    .personal_project_card{
         width: 100vw;
         margin: 1vh;
     }
